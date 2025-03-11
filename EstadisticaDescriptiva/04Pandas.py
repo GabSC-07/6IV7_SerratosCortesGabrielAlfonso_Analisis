@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt     #pip install matplotlib
 
 df = pd.read_csv('./EstadisticaDescriptiva/housing.csv')
 
@@ -27,4 +28,15 @@ print('Desviacion Estandar de años: ', std_age)
 
 # Para poder filtrar
 filtro_oceano = df[ df["ocean_proximity"] == "ISLAND" ]
-print('Filtro de proximidad del océano: ', filtro_oceano)
+print('Filtro de proximidad del océano: ', filtro_oceano) 
+
+# Vaamos a crear un grafico de dispersion entere lsoregistros de la proximidad del oceano vs lso precios
+plt.scatter( df["ocean_proximity"][:10], df["median_house_value"][:10])
+
+# Hay que definir a X y Y
+plt.xlabel('Proximidad')
+plt.ylabel('Precio')
+
+plt.title('Gráfico de Dispersion de Proximidad al oceano vs Precio')
+plt.show()
+
