@@ -38,3 +38,7 @@ plt.ylabel("Valor medio de la casa")
 plt.title("Grafica de Barras del Valor Medio de la Casa VS la Población")
 
 plt.show()
+
+
+
+
